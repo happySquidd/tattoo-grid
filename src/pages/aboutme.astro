@@ -1,12 +1,12 @@
 ---
 import BaseLayout from "~/layouts/BaseLayout.astro"
 ---
-<BaseLayout
-    title="Tattoo portfolio"
-    description="A minimal, single-page photo gallery for Astro."
->
-    <div class="flex justify-center">
-        <h1>Hello.</h1>
-    </div>
-
+<BaseLayout title="About Me" description="About me page">
+    <main class="flex flex-col items-center justify-center pt-50">
+        <h1 class="text-3xl font-bold mb-4 text-center">About Me</h1>
+        <p class="mb-4">Hi I'm Rafael. I build websites for tattoo artists</p>
+        <p class="mb-4">I'm a tattoo enthusiast and like working alongisde artists</p>
+        <p class="mb-4">I'm a university graduate who likes to work with the community</p>
+        <p>This is a sample page. <a href="/contact" class="text-primary underline">And this is a sample link.</a>.</p>
+    </main>
 </BaseLayout>
