@@ -5,4 +5,61 @@ import BaseLayout from "~/layouts/BaseLayout.astro"
 title="Tattoo portfolio"
   description="A minimal, single-page photo gallery for Astro.">
 
+  <div class="flex justify-center">
+    <div  class="flex items-start max-w-md w-full">
+
+        <form class="w-full px-10" enctype="multipart/form-data">
+            <div class="pb-4">
+                <input 
+                class="w-full rounded-sm border border-gray-600 bg-gray-900 px-2 py-2"
+                type="text" id="name" name="name" required placeholder="Your name"/>
+            </div>
+            <div class="pb-4">
+                <input 
+                class="w-full rounded-sm border border-gray-600 bg-gray-900 px-2 py-2"
+                type="email" id="email" name="email" required placeholder="Email"/>
+            </div>
+            <div class="pb-4">
+                <textarea 
+                class="w-full rounded-sm border border-gray-600 bg-gray-900 px-2 py-2"
+                id="message" name="message" required placeholder="Questions or requests"/>
+            </div>
+
+            <div class="pb-1 text-gray-300">Attach your pictures here</div>
+            <div class="pb-2">
+                <input 
+                class="block w-full text-sm text-gray-500 file:rounded-sm file:border-0
+                    file:text-sm file:font-semibold file:py-1 file:px-1
+                    file:bg-gray-400 file:text-black
+                    hover:file:bg-gray-500
+                    cursor-pointer"
+                type="file" id="pic1" name="pic1" accept="image/*"/>
+            </div>
+            <div class="pb-2">
+                <input 
+                class="block w-full text-sm text-gray-500 file:rounded-sm file:border-0
+                    file:text-sm file:font-semibold file:py-1 file:px-1
+                    file:bg-gray-400 file:text-black
+                    hover:file:bg-gray-500
+                    cursor-pointer"
+                type="file" id="pic2" name="pic2" accept="image/*"/>
+            </div>
+            <div class="pb-4">
+                <input 
+                class="block w-full text-sm text-gray-500 file:rounded-sm file:border-0
+                    file:text-sm file:font-semibold file:py-1 file:px-1
+                    file:bg-gray-400 file:text-black
+                    hover:file:bg-gray-500
+                    cursor-pointer"
+                type="file" id="pic3" name="pic3" accept="image/*"/>
+            </div>
+
+            <button type="submit" class="w-full border-white bg-indigo-800 hover:bg-blue-900 text-gray-200 rounded-sm text-sm cursor-pointer">
+                <p class="font-semibold py-2 px-2 text-md">Submit</p>
+            </button>
+        </form>
+    
+    </div>
+  </div>
+
 </BaseLayout>
