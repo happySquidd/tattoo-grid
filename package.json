@@ -20,7 +20,7 @@
     "@astrojs/sitemap": "^3.7.2",
     "@fancyapps/ui": "^6.1.13",
     "@tailwindcss/vite": "^4.2.2",
-    "astro": "^6.1.2",
+    "astro": "^6.1.5",
     "smartypants": "^0.2.2",
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3"
