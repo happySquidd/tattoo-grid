@@ -2,39 +2,98 @@
 import BaseLayout from "~/layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Tattoo portfolio"
-  description="A minimal, single-page photo gallery for Astro.">
-    <div class="flex flex-col items-center pt-20">
-        <h1 class="text-2xl pb-4 text-center">Frequently Asked Questions</h1>
-        <div class="flex flex-col items-start max-w-md w-full">
-            <div>
-                <p class="font-bold">How long for a tattoo to heal?</p>
-                <p class="pb-4">Anywhere from two to three weeks</p>
-            </div>
-            <div>
-                <p class="font-bold">Is itching normal?</p>
-                <p class="pb-4">Itching is a normal healing process</p>
-            </div>
-            <div>
-                <p class="font-bold">Clear film is full with blood, is that normal?</p>
-                <p class="pb-4">Yes, some people have more blood than others</p>
-            </div>
-            <div>
-                <p class="font-bold">How long do i leave the clear film on?</p>
-                <p class="pb-4">Leave the clear film on for two weeks then take it off in the shower</p>
-            </div>
-            <div>
-                <p class="font-bold">Is it supposed to hurt?</p>
-                <p class="pb-4">The pain should go away in a couple days, if not then visit us to have a look</p>
-            </div>
-            <div>
-                <p class="font-bold">Do I have to moisturize daily?</p>
-                <p class="pb-4">You should moisturize every four hours with a light amount of regular skin lotion</p>
-            </div>
-            <div>
-                <p class="font-bold">What if we can't finish in one session?</p>
-                <p class="pb-4">We can finish your tattoo the next day if you need a break, no worries</p>
-            </div>
+<BaseLayout title="FAQ" description="Frequently asked questions about tattoos and the healing process.">
+  <main class="flex flex-col items-center px-6 pt-28 pb-28">
+
+    <div class="w-full max-w-lg flex flex-col items-center gap-16">
+
+      <div class="flex flex-col items-center gap-5 text-center">
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-gray-400 dark:text-gray-500">Got questions?</p>
+        <h1 class="text-5xl font-black italic text-gray-900 dark:text-white">FAQ</h1>
+        <div class="w-8 h-px bg-gray-300 dark:bg-gray-700"></div>
+      </div>
+
+      <div class="w-full flex flex-col">
+        <div class="faq-item">
+          <p class="faq-q">How long for a tattoo to heal?</p>
+          <p class="faq-a">Anywhere from two to three weeks</p>
         </div>
+        <div class="faq-item">
+          <p class="faq-q">Is itching normal?</p>
+          <p class="faq-a">Itching is a normal healing process</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Clear film is full with blood, is that normal?</p>
+          <p class="faq-a">Yes, some people have more blood than others</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">How long do i leave the clear film on?</p>
+          <p class="faq-a">Leave the clear film on for two weeks then take it off in the shower</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Is it supposed to hurt?</p>
+          <p class="faq-a">The pain should go away in a couple days, if not then visit us to have a look</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">Do I have to moisturize daily?</p>
+          <p class="faq-a">You should moisturize every four hours with a light amount of regular skin lotion</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">What if we can't finish in one session?</p>
+          <p class="faq-a">We can finish your tattoo the next day if you need a break, no worries</p>
+        </div>
+      </div>
+
+      <p class="text-sm text-gray-400 dark:text-gray-500">
+        Still have questions? <a href="/contact" class="text-gray-900 dark:text-white underline underline-offset-4 hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Get in touch.</a>
+      </p>
+
     </div>
+  </main>
 </BaseLayout>
+
+<style>
+  .faq-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-top: 1px solid;
+    border-color: #e5e7eb;
+  }
+
+  .faq-item:last-child {
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .faq-q {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .faq-a {
+    font-size: 0.9rem;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .faq-item {
+      border-color: #1f2937;
+    }
+
+    .faq-item:last-child {
+      border-bottom-color: #1f2937;
+    }
+
+    .faq-q {
+      color: #f9fafb;
+    }
+
+    .faq-a {
+      color: #9ca3af;
+    }
+  }
+</style>
