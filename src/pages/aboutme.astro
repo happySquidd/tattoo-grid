@@ -1,12 +1,52 @@
 ---
 import BaseLayout from "~/layouts/BaseLayout.astro"
+import { Image } from "astro:assets"
+import headshot from "~/images/alexandra-vazquez-cxbYfMagp1c-unsplash.jpg"
 ---
 <BaseLayout title="About Me" description="About me page">
-    <main class="flex flex-col items-center justify-center pt-50">
-        <h1 class="text-3xl font-bold mb-4 text-center">About Me</h1>
-        <p class="mb-4">Hi I'm Rafael. I build websites for tattoo artists</p>
-        <p class="mb-4">I'm a tattoo enthusiast and like working alongisde artists</p>
-        <p class="mb-4">I'm a university graduate who likes to work with the community</p>
-        <p>This is a sample page. <a href="/contact" class="text-primary underline">And this is a sample link.</a>.</p>
-    </main>
+  <main class="flex flex-col items-center px-6 pt-28 pb-28">
+    <div class="w-full max-w-lg text-center flex flex-col items-center gap-12">
+
+      <div class="flex flex-col items-center gap-5">
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-gray-400 dark:text-gray-500">Tattoo Artist</p>
+        <h1 class="text-6xl font-black italic text-gray-900 dark:text-white">Rafael</h1>
+        <div class="w-8 h-px bg-gray-300 dark:bg-gray-700"></div>
+    </div>
+    
+    <div class="flex flex-col items-center gap-3">
+      <Image
+        src={headshot}
+        alt="Rafael"
+        width={280}
+        height={280}
+        class="rounded-xl object-cover w-80 h-80"
+      />
+      <a href="https://instagram.com" class="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors tracking-wide">@myinsta</a>
+    </div>
+
+      <div class="flex flex-col gap-6 text-gray-500 dark:text-gray-400 leading-loose">
+        <p>Hi, I'm Rafael, I build websites for tattoo artists and others in my city. I work closely with clients to bring their ideas to life and get them exactly what they need.</p>
+        <p>I love tattoos and how creative you can get to express yourself, and I respect the effort the artists put in.</p>
+        <p>I graduated from Wake Tech with a web development degree and I want to bring my skills to the community.</p>
+      </div>
+
+      <p class="text-2xl font-light italic text-gray-300 dark:text-gray-600 leading-snug">
+        "The skin is a canvas.<br />And you are the artist."
+      </p>
+
+
+      <div class="w-8 h-px bg-gray-200 dark:bg-gray-800"></div>
+
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400 dark:text-gray-500">
+        <span>Custom designs</span>
+        <span class="text-gray-200 dark:text-gray-700">·</span>
+        <span>Cover-ups</span>
+        <span class="text-gray-200 dark:text-gray-700">·</span>
+        <span>Touch-ups</span>
+        <span class="text-gray-200 dark:text-gray-700">·</span>
+        <span>Consultations</span>
+      </div>
+
+    </div>
+  </main>
 </BaseLayout>
